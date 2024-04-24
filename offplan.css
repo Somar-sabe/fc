@@ -490,7 +490,7 @@ input::placeholder {
 .plan-title {
   font-weight: bold;
   width: 90%;
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
 }
 
