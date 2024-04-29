@@ -86,7 +86,6 @@ input::placeholder {
 
 /* Common */
 .section-header {
-  background-image: url("https://dev.fandcproperties.ae/assets/images/line_mask.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -219,25 +218,7 @@ input::placeholder {
   justify-content: center;
 }
 
-@media only screen and (max-width: 1024px) {
-  .desktop-header {
-    display: none;
-  }
 
-  .mobile-header {
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .desktop-header {
-    display: flex;
-  }
-
-  .mobile-header {
-    display: none;
-  }
-}
 
 @media only screen and (min-width: 768px) {
   .section-header {
@@ -488,6 +469,75 @@ input::placeholder {
 
 /* Payment Plan */
 .plan-title {
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .plan-content {
+    margin-top: 40px;
+    width: 100%;
+    background-color: #00398A;
+    color: white;
+    padding: 50px 0;
+  }
+  
+  .plan-content-price>span {
+      font-size: 36px;
+      font-weight: bold;
+  }
+  
+  .plan-content-price {
+      text-transform: uppercase;
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 25px;
+  }
+  
+  .plan-content-percent {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  
+  }
+  
+  .plan-content-percent-item {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .plan-content-percent-item-heading {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .plan-content-text {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .plan-content-text-item {
+    text-align: center;
+  }
+  
+  .plan-content-percent-item-subheading {
+    font-size: 16px;
+    margin-top: 18px;
+  }
+  
+/*
+.plan-title {
   font-weight: bold;
   width: 90%;
   text-align: center;
@@ -518,8 +568,7 @@ input::placeholder {
 .plan-content-percent {
   width: 90%;
   margin: 0 auto;
-  border-radius: 24px;
-  border: 1px solid white;
+
   padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -531,6 +580,8 @@ input::placeholder {
 .plan-content-percent-item {
   width: 100%;
   display: flex;
+  border-radius: 50%;
+  border: 1px solid white;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -556,7 +607,7 @@ input::placeholder {
     gap: 40px;
   }
 }
-
+*/
 /* Gallery */
 .gallery-title {
   font-weight: bold;
@@ -642,7 +693,7 @@ input::placeholder {
     border-radius: 8px;
     font-size: 18px;
     /* width: max-content !important; */
-    width: 100% !important;
+    /*width: 100% !important;*/
     margin-right: 10px;
 }
 
@@ -654,7 +705,7 @@ input::placeholder {
     border-radius: 8px;
     font-size: 18px;
     /* width: max-content !important; */
-    width: 100% !important;
+  /*  width: 100% !important; */
     margin-right: 10px;
 }
 .swiper{
@@ -711,13 +762,7 @@ input::placeholder {
   bottom: 50px;
 }
 
-.floor-iframe {
-  border-radius: 24px;
-  border: none;
-  width: 100%;
-  height: 500px;
-  margin-top: 20px;
-}
+
 
 @media only screen and (min-width: 768px) {
   .floor-title {
@@ -747,9 +792,7 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 1536px) {
-  .floor-iframe {
-    height: 30rem;
-  }
+
 
 
 .brochure-content {

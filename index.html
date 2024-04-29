@@ -454,40 +454,52 @@
         </div>
     </div>
     
-    
-    <!-- Header -->
-    <div class="desktop-header" style="
-            background-image: url(image1.png);
-            background-repeat: no-repeat;
-            background-position: center;
-          
-            
-            
-        ">
-        <style>
-            .desktop-header {
-    position: relative;
-    overflow: hidden; /* Ensures that the border-radius is applied to the background image */
-   
+    <style>
+        .desktop-header {
+position: relative;
+overflow: hidden; 
+
 }
 
 .desktop-header::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 40px;
-    right: 40px;
-    bottom: 0;
-    background-image: url(image1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; /* Adjust as needed */
-    border-radius: 40px; /* Apply border-radius to the pseudo-element */
-    z-index: -1; /* Ensure the pseudo-element is behind other content */
-    
+content: "";
+position: absolute;
+top: 0px;
+left: 40px;
+right: 40px;
+bottom: 0;
+background-image: url(image1.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+border-radius: 40px; 
+z-index: -1; 
+
+}
+@media only screen and (max-width: 768px) {
+
+
+    .desktop-header::before {
+content: "";
+position: absolute;
+top: 0px;
+left: 0px !important;
+right: 0px !important;
+bottom: 0;
+background-image: url(image1.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+border-radius: 0px !important; 
+z-index: -1; 
+
 }
 
-        </style>
+}
+
+    </style>
+    <!-- Header -->
+    <div class="desktop-header" >
         <div class="desktop-header-content" style="border-radius: 40px;">
         <div style="
                 width: 100%;
@@ -506,76 +518,53 @@
                
                     </div>
     </div>
-    <!--
-    <button class="desktop-header-video animate-shadow-ping">
-        <img class="desktop-header-video-icon" src="https://fandcproperties.ae/assets/images/offplan/play.svg" alt="play" />
-    </button>-->
-    <!-- Mobile Header -->
-    <div class="mobile-header">
-        <img src="https://4f4ddd362bf8100427756fe3c5d0cce5.cdn.bubble.io/f1685001213443x986428768185860400/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202023-05-25%20%D0%B2%2010.47.jpg" alt="banner"
-        class="mobile-header-image" />
-        <div class="mobile-header-content">
-        <h1 class="heading mobile-header-title">
-            Gateway Porto Alzora
-        </h1>
-        <button class="shine mobile-header-button">Discover More</button>
-        
-                </div>
-    </div>
-    <!--
-    <button class="mobile-header-video animate-shadow-ping">
-        <img class="desktop-header-video-icon" src="https://fandcproperties.ae/assets/images/offplan/play.svg" alt="play" />
-    </button>
-    -->
-    <!-- Features -->
-    <!--
-    <div class="feature-content">
-        <div class="feature-item">
-            <img src="https://fandcproperties.ae/assets/images/offplan/price.png" alt="price" />
-            <div class="feature-item-content">
-                <h2 class="feature-item-content-header">AED   8,800,000  </h2>
-                <p class="feature-item-content-text">starting price</p>
-            </div>
-        </div>
-        <div class="feature-item">
-            <img src="https://fandcproperties.ae/assets/images/icons/handover_icon.png" alt="handover" />
-            <div class="feature-item-content">
-                                    <h2 class="feature-item-content-header">2024-07-30</h2>
-                                <p class="feature-item-content-text">HANDOVER</p>
-            </div>
-        </div>
-        <div class="feature-item">
-            <img src="https://fandcproperties.ae/assets/images/icons/payment_plan_icon.png" alt="payment" />
-            <div class="feature-item-content">
-                <h2 class="feature-item-content-header">Easy 70/30</h2>
-                <p class="feature-item-content-text">PAYMENT PLAN</p>
-            </div>
-        </div>
-        <div class="feature-item">
-            <img src="https://fandcproperties.ae/assets/images/icons/developer_icon.png" alt="developer" />
-            <div class="feature-item-content">
-                <h2 class="feature-item-content-header">Azizi</h2>
-                <p class="feature-item-content-text">Developer</p>
-            </div>
-        </div>
-    </div>
--->
+    
+   
+    
     <!-- About -->
 
     <style>
         /* Mobile styles */
-@media only screen and (max-width: 768px) {
-    .game {
-        display: block !important;
+        @media only screen and (max-width: 768px) {
+        .game {
+            flex-direction: column !important; /* Change flex direction to stack elements vertically */
+            align-items: center; /* Center elements horizontally */
+            margin-top: 20px;
+        }
+        .about-content {
+            text-align: center; /* Center text content */
+            margin: 0 auto; /* Center images horizontally */
+            margin-top: 10px; /* Adjust margin top as needed */
+            width: 80%; /* Adjust image width */
+        }
+        .gr{
+           width: 75% !important;
+           margin-left: 13px !important;
+           margin-top: 10px;
+        }
+        .gh{
+  display: block;
+margin-top: 30px !important;
+width: 100% !important;
+        }
     }
-
-}
 
         .game{
             display: flex;
             flex-direction: row;
             margin-top: 20px;
         }
+        .gr{
+           width: 35%;
+           margin-left: 130px;
+           margin-top: 10px;
+        }
+        .gh{
+  display: block;
+margin: 0 auto;
+width: 35%;
+        }
+
     </style>
     <div class="game">
         <div style="display: flex;flex-direction: column;">
@@ -587,16 +576,14 @@
         Situated next to The Oberoi Beach Resort, Al Zorah, Gateway Porto Al Zorah is a premium marina-front project by Al Zorah Development Company. Nestled amidst lush mangroves and sitting on the waterfront, the complex houses comfortable studios, 1-3 bedroom apartments and 2-3 bedroom duplexes.
     </p>
 
-   <img style="width: 35%;margin-left: 130px;margin-top: 10px;" src="Group 942.png" alt="">
+    <p class="d-block d-md-none about-content">
+        Situated next to The Oberoi Beach Resort, Al Zorah, Gateway Porto Al Zorah is a premium marina-front project by Al Zorah Development Company. Nestled amidst lush mangroves and sitting on the waterfront, the complex houses comfortable studios, 1-3 bedroom apartments and 2-3 bedroom duplexes.<span id="dots">... </span>
+                              </p>
+   <img class="gr" src="Group 942.png" alt="">
    </div>
 
-    <p class="d-block d-md-none about-content">
-                    Situated next to The Oberoi Beach Resort, Al Zorah, Gateway Porto Al Zorah is a premium marina-front project by Al Zorah Development Company. Nestled amidst lush mangroves and sitting on the waterfront, the complex houses comfortable studios, 1-3 bedroom apartments and 2-3 bedroom duplexes.<span id="dots">... </span>
-                                          </p>
 
-<img style="   display: block;
-margin: 0 auto; /* Center the image horizontally */
-width: 35%;"  src="image1058.png" alt="">
+<img class="gh" src="image1058.png" alt="">
 
 </div>
     <div class=" brochure-content">
@@ -648,6 +635,7 @@ width: 35%;"  src="image1058.png" alt="">
 
 </div>
 
+
 <style>
     .box {
         display: flex;
@@ -657,50 +645,36 @@ width: 35%;"  src="image1058.png" alt="">
         width: 60%; 
         margin: 0 auto; 
     }
-    .box img {
+    .image-container {
         border: 1px solid grey; 
         border-radius: 10px;
         /* Adjust the width of the images */
-   
-        padding-right: 30px ;
-        padding-top:15px ;
-        padding-left:30px ;
-        padding-bottom:15px ; /* Adjust the padding around the images */
+        padding: 15px 30px; /* Adjust the padding around the images */
+    }
+    .image-container img {
+        width: 100%; /* Ensure the image fills its container */
+        display: block; /* Prevents any space below the image */
     }
 </style>
 
 <div class="box">
-    <img src="Frame 60.png" alt="">
-    <img src="Frame 61.png" alt="">
-    <img src="Frame 62.png" alt="">
+    <div class="image-container">
+        <img src="Frame 62.png" alt="">
+    </div>
+    <div class="image-container">
+        <img src="Frame 61.png" alt="">
+    </div>
+    <div class="image-container">
+        <img src="Frame 62.png" alt="">
+    </div>
 </div>
 
 
 
-    <div class="plan-content">
-        <div class="section-header">
-            <h1 class="heading plan-title"> Payment Plan <br />
-                <span style="color: #fff">50/50</span>
-            </h1>
-        </div>
-        <p class="plan-content-price" style="align-items: center;display: flex;"> starting price&nbsp;&nbsp;&nbsp; <span style="">
-              8,800,000   AED </span>
-        </p>
-        <div class="plan-content-percent">
-            <div class=" plan-content-percent-item">
-                <h1 class="plan-content-percent-item-heading">10%</h1>
-                <h3 class="plan-content-percent-item-subheading">On booking</h3>
-            </div>
-            <div class=" plan-content-percent-item">
-                <h1 class="plan-content-percent-item-heading">40%</h1>
-                <h3 class="plan-content-percent-item-subheading">on construction</h3>
-            </div>
-            <div class=" plan-content-percent-item">
-                                    <h1 class="plan-content-percent-item-heading">50%</h1>
-                    <h3 class="plan-content-percent-item-subheading">Upon Handover</h3>
-                            </div>
-        </div>
-    </div>
+
+    <!--mobile-->
+
+
 
     <!-- Project Gallery -->
     <div class="section-header">
@@ -724,7 +698,7 @@ width: 35%;"  src="image1058.png" alt="">
                 </div>
                             <div class="swiper-slide"
                     style="
-                    background-image: url(Rectangle%20246.png);
+                    background-image: url(Rectangle246.png);
                     background-size: cover;
                   ">
                 </div>
@@ -762,12 +736,53 @@ width: 35%;"  src="image1058.png" alt="">
                     </div>
                                     <div class="swiper-slide"
                         style="
-                        background-image: url(Rectangle%20248.png);
+                        background-image: url(Rectangle248.png);
                         background-size: cover;
                     ">
                     </div>
                             </div>
         </div>
+
+
+        
+    <div class="plan-content">
+        <div class="section-header">
+            <h1 class="heading plan-title"> 50/50 Payment Plan 
+             
+            </h1>
+        </div>
+        <p class="plan-content-price" > starting price&nbsp;&nbsp;&nbsp; <span >
+              8,800,000   AED </span>
+        </p>
+        <div class="plan-content-percent" >
+            <div class="plan-content-percent-item ">
+                <h1 class="plan-content-percent-item-heading ">10%</h1>
+            </div>
+            
+            <div class="plan-content-percent-item">
+                <h1 class="plan-content-percent-item-heading">40%</h1>
+            </div>
+            <div class="plan-content-percent-item">
+                <h1 class="plan-content-percent-item-heading">50%</h1>
+            </div>
+        </div>
+        <div class="plan-content-text ">
+            <div class="plan-content-text-item " >
+                <h3 class="plan-content-percent-item-subheading ">On Booking</h3>
+            </div>
+            
+            <div class="plan-content-text-item">
+                <h3 class="plan-content-percent-item-subheading">On Construction</h3>
+            </div>
+            <div class="plan-content-text-item">
+                <h3 class="plan-content-percent-item-subheading">Upon Handover</h3>
+            </div>
+        </div>
+    </div>
+    
+
+
+
     
     <!-- Floor Plan -->
     <div class="section-header">
@@ -777,22 +792,22 @@ width: 35%;"  src="image1058.png" alt="">
         <div class="swiper-wrapper">
                             
                 <div class="swiper-slide">
-                    <button data-layout-id="1" class="floor-type swiper-slide fc-text-wrap changeLayout   floor-tab-active ">
+                    <button data-layout-id="1" class="floor-type fc-text-wrap changeLayout   floor-tab-active ">
                          1-Bedroom                    </button>
                 </div>
                             
                 <div class="swiper-slide">
-                    <button data-layout-id="2" class="floor-type swiper-slide fc-text-wrap changeLayout  floor-tab ">
+                    <button data-layout-id="2" class="floor-type  fc-text-wrap changeLayout  floor-tab ">
                         2-Bedroom                    </button>
                 </div>
                             
                 <div class="swiper-slide">
-                    <button data-layout-id="3" class="floor-type swiper-slide fc-text-wrap changeLayout  floor-tab ">
+                    <button data-layout-id="3" class="floor-type  fc-text-wrap changeLayout  floor-tab ">
                         3-Bedroom                     </button>
                 </div>
                             
                 <div class="swiper-slide">
-                    <button data-layout-id="4" class="floor-type swiper-slide fc-text-wrap changeLayout  floor-tab ">
+                    <button data-layout-id="4" class="floor-type  fc-text-wrap changeLayout  floor-tab ">
                         4-Bedroom                    </button>
                 </div>
                             
@@ -832,35 +847,61 @@ width: 35%;"  src="image1058.png" alt="">
     </div>
 
     <div class="floor-content">
+        
+        <div style="display: flex;flex-direction: column;
+        border-radius: 24px;
+        border: none;
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        overflow: hidden !important;">                             
+      <iframe id="feature3dView" src="image 1061.png" width="100%" height="100%" ></iframe>
+    
+      <h2 style="color: #002860;text-align: center;">Studio units</h2>
+      <p style="color: #002860;text-align: center;">Total area 360 sqft</p>
+      <button style="background-color: #002860;border-radius: 20px; color: #fff; width: 40%; text-align: center; margin: auto;">Get All floor plans</button>
+
+    </div> 
+  
+ 
                    <div class="floor-content-image-container">
                             
                 <div class="featureFloorPlanSection">
-                    <img id="featureFloorPlan" src="https://4f4ddd362bf8100427756fe3c5d0cce5.cdn.bubble.io/f1688131475192x910348388792260100/AZURE%20STUDIO.png" alt="floor-plan"  class="floor-content-image" />
+                   
+                    <img id="featureFloorPlan" src="image 25.png" alt="floor-plan"  class="floor-content-image" />
                     <button class="floor-content-button-bed" id="fp-heading"> Studio </button>
-                    <button class="floor-content-button-plan"> Floor Plan </button>
+                    <button class="floor-content-button-plan"> 360 view </button>
                 </div>
             
         </div>
      
-                                                
-                <iframe id="feature3dView" src="https://azizidevelopments.s3.amazonaws.com/360views/2020/Riviera-Studiodata2022/Riviera-Studio-01.html" width="100%" height="100%" class=" floor-iframe"></iframe>
-                    
     </div>
-        <!-- About -->
-        <div class="section-header">
-            <h1 class="heading about-title">About Location</h1>
-        </div>
+
+
+    <div class="game">
+        <div style="display: flex;flex-direction: column;">
+    <div class="section-header">
+        <h1 class="heading about-title">About Location</h1>
+    </div>
     
-        <p class="d-none d-md-block about-content">
-            Owing to its prime location in Al Zorah City, Seaside Hills Residence offers excellent connectivity to Sheikh Mohammed Bin Zayed Road. This strategic positioning allows for easy access to various key destinations in and around the emirate. For instance, Sharjah International Airport is just a short 25-minute drive away, while Al Marjan Island in Ras Al Khaimah, which is home to the UAE's first casino, and Dubai International Airport can be reached within 45 minutes  </p>
+    <p class="d-none d-md-block about-content">
+        Over the last years Dubai has become an international investment hub, particularly after opening its real estate market to foreign investors. Dubai has set up special areas for non-citizens to invest in property, which are also known as “freehold zones”.  Popular amongst tenants and investors, Downtown Dubai is one of the best freehold zones in Dubai. Besides world-renowned Burj Khalifa, Dubai Fountain and Dubai Opera, Downtown Dubai also offers a large variety of freehold apartments. For example, Burj Crown apartment in Downtown Dubai costs from AED 957,888. However, apartments in Emaar IL Primo prices start at AED 18M.</p>
     
+    </div>
     
-    <br>
-        <p class="d-block d-md-none about-content">
-            One of the outstanding features of this development is its accessibility not only by land and air, but also by sea, thanks to the four state-of-the-art marinas in the surrounding area.
-            <span id="dots">... </span><button id="seeMoreBtn">see more</button><span id="remainingText" style="display: none;">te expression of luxury and comfort.</span>            </p>
-  
-    <!-- Map -->
+    <p class="d-block d-md-none about-content">
+        Over the last years Dubai has become an international investment hub, particularly after opening its real estate market to foreign investors. Dubai has set up special areas for non-citizens to invest in property, which are also known as “freehold zones”.  Popular amongst tenants and investors, Downtown Dubai is one of the best freehold zones in Dubai. Besides world-renowned Burj Khalifa, Dubai Fountain and Dubai Opera, Downtown Dubai also offers a large variety of freehold apartments. For example, Burj Crown apartment in Downtown Dubai costs from AED 957,888. However, apartments in Emaar IL Primo prices start at AED 18M.                     </p>
+    
+    <img style="   display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    width: 35%;"  src="image 1058.png" alt="">
+    
+    </div>
+
+
+
+
+          <!-- Map -->
     <div class="section-header">
         <h1 class="map-title"> Map </h1>
         <img src="Rectangle174 .png" alt="">
@@ -870,6 +911,9 @@ width: 35%;"  src="image1058.png" alt="">
     </div>
 
     <style>
+        .bash{
+            display: flex;flex-direction: row;margin-top: 30px;
+        }
     .iti--separate-dial-code .iti__selected-flag{
         background-color:transparent;
     }
@@ -889,7 +933,17 @@ width: 35%;"  src="image1058.png" alt="">
     .purpose-radio-section .radio1 {
         margin-left: 20px;
     }
+    .guk{
+        display: block;
+        margin: 0 auto; 
+        width: 35%;
+    }
  @media  screen and (max-width: 768px) {
+    .bash{
+       display: flex;
+       flex-direction: column !important;
+       margin-top: 30px;
+    }
     .mobile-grid {
         display: grid;
         flex-wrap: nowrap;
@@ -902,27 +956,44 @@ width: 35%;"  src="image1058.png" alt="">
     .purpose-radio-section .radio1 {
         margin-left: 0px;
     }
+    .guk{
+        display: block;
+        margin: 0 auto; 
+        width: 90% !important;
+    }
  }
 </style>
-<div class="game">
-    <div style="display: flex;flex-direction: column;">
-<div class="section-header">
-    <h1 class="heading about-title">About Developer</h1>
+
+
+<div class="bash" >
+    <div style="display: flex;flex-direction: column;padding-top: 0px !important;">     
+  <div class="section-header" style="padding-top: 0px !important;">
+      <h1 class="heading about-title" style="padding-top: 0px !important;">About Developer</h1>
+  </div>
+
+  <p class="d-none d-md-block about-content">
+      Owing to its prime location in Al Zorah City, Seaside Hills Residence offers excellent connectivity to Sheikh Mohammed Bin Zayed Road. This strategic positioning allows for easy access to various key destinations in and around the emirate. For instance, Sharjah International Airport is just a short 25-minute drive away, while Al Marjan Island in Ras Al Khaimah, which is home to the UAE's first casino, and Dubai International Airport can be reached within 45 minutes  which is home to the UAE's first casino, and Dubai International Airport can be reached within 45 minutes </p>
+
+
+      <p class="d-block d-md-none about-content">
+          One of the outstanding features of this development is its accessibility not only by land and air, but also by sea, thanks to the four state-of-the-art marinas in the surrounding area.
+          
+         te expression of luxury and comfort.         </p>
+                                      </div> 
+
+<img class="guk"  src="image1058.png" alt="">
+
 </div>
 
-<p class="d-none d-md-block about-content">
-    Over the last years Dubai has become an international investment hub, particularly after opening its real estate market to foreign investors. Dubai has set up special areas for non-citizens to invest in property, which are also known as “freehold zones”.  Popular amongst tenants and investors, Downtown Dubai is one of the best freehold zones in Dubai. Besides world-renowned Burj Khalifa, Dubai Fountain and Dubai Opera, Downtown Dubai also offers a large variety of freehold apartments. For example, Burj Crown apartment in Downtown Dubai costs from AED 957,888. However, apartments in Emaar IL Primo prices start at AED 18M.</p>
 
-</div>
 
-<p class="d-block d-md-none about-content">
-    Over the last years Dubai has become an international investment hub, particularly after opening its real estate market to foreign investors. Dubai has set up special areas for non-citizens to invest in property, which are also known as “freehold zones”.  Popular amongst tenants and investors, Downtown Dubai is one of the best freehold zones in Dubai. Besides world-renowned Burj Khalifa, Dubai Fountain and Dubai Opera, Downtown Dubai also offers a large variety of freehold apartments. For example, Burj Crown apartment in Downtown Dubai costs from AED 957,888. However, apartments in Emaar IL Primo prices start at AED 18M.                     </p>
 
-<img style="   display: block;
-margin: 0 auto; /* Center the image horizontally */
-width: 35%;"  src="image 1058.png" alt="">
 
-</div>
+
+
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
