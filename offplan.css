@@ -117,6 +117,7 @@ input::placeholder {
   color: white;
   font-size: 50px;
   font-weight: bold;
+  z-index: 88888888;
 }
 
 .desktop-header-content {
@@ -229,7 +230,7 @@ input::placeholder {
 /* About */
 .about-title {
   font-weight: bold;
-  width: 90%;
+  
   text-align: left;
   margin: 0 auto;
 }
@@ -335,18 +336,18 @@ input::placeholder {
 
 .brochure-content-form {
   width: 75%;
-  padding-top: 100px;
+  padding-top: 10px !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  gap: 20px
+  
 }
 
 .brochure-content-form-input {
-  width: 100%;
-  padding: 12px;
+  width: 70%;
+  padding: 2px;
   border: none !important;
   border-bottom: 1px solid #00398A !important;
   background-color: transparent;
@@ -355,13 +356,12 @@ input::placeholder {
 }
 
 .brochure-content-form-button {
-  margin-top: 30px;
   background-color: #00398A;
-  width: 100%;
+  width: 80%;
   color: white;
-  padding: 16px 0;
+  padding: 8px 0;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .brochure-book {
@@ -369,7 +369,7 @@ input::placeholder {
   display: flex;
   top: -150px;
   right: 0;
-  width: 100%;
+  width: 160% !important;
 }
 
 .brochure-book-2 {
@@ -382,24 +382,60 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 768px) {
-  .brochure-book {
-    top: -120px;
-    right: 3.5%;
-    width: 90%;
-    display: flex;
+    .brochure-content-form-input {
+        width: 100%;
+        padding: 12px;
+        border: none !important;
+        border-bottom: 1px solid #00398A !important;
+        background-color: transparent;
+        font-size: 20px;
+        color: #000;
+        z-index: 1; /* Ensure the input fields are above the background */
+      }
+      .brochure-content {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 200px !important;
+        margin-bottom: 50px;
+        border-radius: 24px;
+        border: 2px solid #000;
+        background-color: #fff;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
+      
+      
+  .brochure-content-form {
+   
+    padding-top: 0px !important;
   }
+      
+      .brochure-content-form-button {
+        margin-top: 30px;
+        background-color: #00398A;
+        width: 100%;
+        color: white;
+        padding: 16px 0;
+        border-radius: 8px;
+        font-size: 20px;
+        z-index: 1 !important; /* Ensure the button is above the background */
+      }
+      
+      .brochure-book {
+      
+        position: absolute;
+        display: flex;
+        top: -150px;
+        right: 0;
+        width: 100% !important;
+        z-index: -1 !important; /* Ensure the book image is behind the form */
+      }
 
- .brochure-content-form-button {
-  margin-top: 20px;
-}
-
-.brochure-content-form {
-  gap: 10px;
-  padding-top: 55px;
-  margin-top: 20px;
-}
   .brochure-book-2 {
-    display: none;
+    display: none !important;
   }
 
 .feature-content{
@@ -431,12 +467,12 @@ input::placeholder {
   }
 
   .brochure-content {
-    width: 60%;
+    width: 75%;
     margin-top: 40px;
   }
 
   .brochure-content-form {
-    width: 35%;
+    width: 45%;
     padding: 12px;
   }
 
@@ -455,17 +491,38 @@ input::placeholder {
   .brochure-book-2 {
     display: flex;
   }
+  
+  .brochure-content-form {
+    width: 75%;
+    padding-top: 100px; /* Adjust the padding top to create space for the book */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+    position: relative; /* Add position relative */
+  }
+  
+  .brochure-content-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('PS 13.02 1.png') no-repeat; /* Use the book image as background */
+    background-size: cover;
+    z-index: -1; /* Ensure the background is behind the form */
+  }
+  
+
 }
 
-@media only screen and (min-width: 1536px) {
-  .brochure-book {
-    display: none;
-  }
 
-  .brochure-book-2 {
-    width: 45%;
-  }
-}
+ 
+
+
 
 /* Payment Plan */
 .plan-title {
@@ -635,11 +692,12 @@ input::placeholder {
 }
 
 .swiper-button-prev {
-  margin-left: 20px;
+  margin-left: 10px;
+
 }
 
 .swiper-button-next {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .gallery-thumbs .swiper-slide {
@@ -744,6 +802,7 @@ input::placeholder {
 
 .floor-content-button-bed {
   background-color: #00398a;
+  border-color: #00398A !important;
   position: absolute;
   padding: 12px;
   left: 40px;
@@ -754,6 +813,7 @@ input::placeholder {
 
 .floor-content-button-plan {
   background-color: #00398a;
+  border-color: #00398A !important;
   position: absolute;
   padding: 12px;
   left: 40px;
